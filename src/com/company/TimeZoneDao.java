@@ -33,6 +33,27 @@ public class TimeZoneDao {
         }
         return ret;
     }
+    public List<City> getListCity() {
+        List<City> ret = new ArrayList<>();
+        String sql = "SELECT * FROM `timezone`";
+        Connection connection = dbUtil.getConnection();
+        try {
+            PreparedStatement prSt = connection.prepareStatement(sql);
+            ResultSet resultSet = prSt.executeQuery();
+            while (resultSet.next()) {
+                City city = new City();
+                String[] subStr = resultSet.getString("timezone").split("/");
+                city.cityName = subStr[1];
+                city.zoneName = subStr[0];
+                city.countryCode = resultSet.getString("country_code");
+                city.gmtOffset = resultSet.getString("gmt_offset");
+                ret.add(city);
+            }
+        }catch (SQLException sqlEx) {
+            sqlEx.printStackTrace();
+        }
+        return ret;
+    }
 
     public void checkCon() {
         List<City> ret = new ArrayList<>();
