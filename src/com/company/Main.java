@@ -2,14 +2,16 @@ package com.company;
 
 import com.company.model.City;
 
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
         TimeZoneDao timeZoneDao = new TimeZoneDao();
         timeZoneDao.checkCon();
         WebService webService = new WebService();
-        City city = webService.getCityByCode("KZ");
-        System.out.println(city.toString2());
+        List<City> city = webService.getListCityByCode("KZ");
+        System.out.println(city.get(2).toString2());
 
         // write your code here
 //        SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");

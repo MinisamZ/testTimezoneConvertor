@@ -17,10 +17,15 @@ public class City {
     }
 
     public String toString2() {
-        return " City:" +
-                "\ncountry code: " + countryCode +
-                "\nzone name: " + zoneName +
-                "\ncity name: " + cityName +
-                "\nUTC: " + gmtOffset;
+        if (Double.parseDouble(gmtOffset) > 0)
+            return "City " + cityName + ":" +
+                    "\n zone name: " + zoneName +
+                    "\n country code: " + countryCode +
+                    "\n UTC: + " + gmtOffset;
+        else
+            return "City " + cityName + ":" +
+                    "\n zone name: " + zoneName +
+                    "\n country code: " + countryCode +
+                    "\n UTC: " + gmtOffset;
     }
 }
