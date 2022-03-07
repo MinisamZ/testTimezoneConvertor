@@ -3,12 +3,13 @@ package com.company;
 import com.company.model.City;
 
 import javax.jws.WebMethod;
+import javax.jws.WebService;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-@javax.jws.WebService
-public class WebService {
+@WebService
+public class WebServiceTest {
 
     private TimeZoneDao timeZoneDao = new TimeZoneDao();
 

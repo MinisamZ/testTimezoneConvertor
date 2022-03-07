@@ -6,6 +6,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class TimeZoneDao {
     private static Statement stmt;
     private static ResultSet rs;
@@ -79,7 +80,7 @@ public class TimeZoneDao {
 //                    System.out.println(city.toString2());
 //            }
             if (resultSet.next())
-            System.out.println("Есть коннект с бд!");
+                System.out.println("Есть коннект с бд!");
         } catch (SQLException sqlEx) {
             sqlEx.printStackTrace();
         }
