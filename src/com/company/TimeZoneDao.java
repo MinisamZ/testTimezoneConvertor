@@ -6,7 +6,6 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class TimeZoneDao {
     private static Statement stmt;
     private static ResultSet rs;

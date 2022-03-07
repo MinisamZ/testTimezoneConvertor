@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         TimeZoneDao timeZoneDao = new TimeZoneDao();
         timeZoneDao.checkCon();
-        WebServiceTest webService = new WebServiceTest();
+        TimeZoneWebService webService = new TimeZoneWebService();
         List<City> city = webService.getListCityByCode("KZ");
         System.out.println(city.get(2).toString2());
         System.out.println(webService.getCityByCityName("London").toString2());

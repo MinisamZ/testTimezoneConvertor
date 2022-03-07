@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Locale;
 
 @WebService
-public class WebServiceTest {
+public class TimeZoneWebService {
 
     private TimeZoneDao timeZoneDao = new TimeZoneDao();
 
